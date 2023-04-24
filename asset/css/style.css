@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=IBM+Plex+Mono&display=swap');
+:root{
+  --lightblue: #8bd4dd;
+  --blue: #118eea;
+  --yellow: #fbae2c;
+  --purple: #4d3394;
+  --red: #e12428;
+  --bg: #f2f6f5;
+}
+*, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  user-select: none;
+}
+.btn-login{
+ width: 100%; 
+ padding: 5px;
+ display: flex;
+ justify-content: end;
+ margin-top: 1rem;
+}
+.btn-login #login{
+  padding: 9px 20px;
+  margin-right: 13px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  box-shadow: 6px 6px 3px rgb(0,0,0);
+  background-color: var(--lightblue);
+  text-transform: capitalize;
+  user-select: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+/* LOGIN PAGE */
+@keyframes pop{
+  from{
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.login-page{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0,.6);
+  position: absolute;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+.login-page.active{
+  display: flex;
+  align-items: center;
+}
+/* FORM PAGE LOGIN */
+.login-form{
+  width: 100%;
+  background-color: white;
+    box-shadow: 9px 13px 0px rgb(0,0,0,1);
+  animation: pop 0.3s ease;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.login-form i{
+  font-size: 1.9em;
+  right: 2px;
+  top: 2px;
+  position: absolute;
+  cursor: pointer;
+  color: rgb(165,165,165);
+  transition: color 0.3s ease;
+}
+.login-form i:hover{
+ color: black; 
+}
+.login-form form{
+  /* background-color: var(--lightblue); */
+  width: 86%;
+  padding: 20px 0px;
+}
+.login-form form h4{
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 10px;
+  font-family: "Comfortaa";
+  margin-bottom: 2rem;
+}
+
+.login-form form .email{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.login-form form .email label{
+  font-size: .9em;
+  text-transform: capitalize;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.login-form form .email input{
+  border: none;
+  padding: 8px 0px;
+  font-size: .9em;
+  font-family: 'iBM Plex Mono', Monospace;
+  outline: none;
+  margin-top: 6px;
+  border-bottom: 2px solid black;
+}
+.login-form form .email input:focus{
+  width: 100%;
+  border-bottom: 2px solid var(--blue);
+}
+.login-form form .email input.activa{
+  border-bottom: 2px solid red;
+}
+.valid{
+  font-size: .7em;
+  margin-top: 5px;
+  font-family: 'iBM Plex Mono', Monospace;
+  color: red;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  display: none;
+}
+.valid.active2{
+  display: block;
+  color: red;
+}
+
+
+.submit-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 47px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.submit-container a{
+  color: black;
+  font-size: .9em;
+  font-family: 'iBM Plex Mono', Monospace;
+  text-decoration: none;
+}
+.submit-container button{
+  height: 100%;
+  background-color: var(--lightblue);
+  width: 47%;
+  font-family: 'iBM Plex Mono', Monospace;
+  text-transform: capitalize;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-size: 1.2em;
+  box-shadow: 6px 6px 3px rgb(0,0,0,1);
+}
+/* PROFILE */
+.profile{
+  width: 100%;
+  display: flex;
+  height: 150px;
+  align-items: center;
+  margin-top: 15px;
+  /* background-color: var(--yellow); */
+}
+.profile img{
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-position: center;
+  background-size: center;
+  margin-left: 30px;
+  margin-right: 15px;
+}
+.data-diri{
+  display: flex;
+  height: 113px;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  /* background-color: tomato; */
+}
+.data-diri h3{
+  font-size: 22px;
+  font-family: "Comfortaa";
+  font-weight: 600;
+}
+.sosial{
+  margin-left: 10px;
+  user-select: none;
+}
+.sosial i{
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+.sosial i:hover{
+  background-color: rgb(175,175,175,.3);
+}
+.data-diri p{
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+/* NOMINAL GIFT */
+.container{
+  width: 96%;
+  border-radius: 8px;
+  border: 2px solid black;
+  height: auto;
+  background-color: var(--bg);
+  box-shadow: 8px 7px 1px rgb(0,0,0,1);
+  margin: 15px auto;
+}
+.container form{
+  padding: 14px 10px;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.secound{
+  margin-top: 13px;
+}
+.secound input{
+  background-color: transparent;
+  font-family: 'IBM Plex Mono', Monospace;
+  border: none;
+  font-size: 1em;
+  position: relative;
+  outline: none;
+  padding: 8px 3px;
+  border-bottom: 2px solid black;
+  transition: all 0.3s ease;
+}
+/* .secound input:focus{
+  border-bottom: 2px solid var(--lightblue);
+} */
+.input-box label{
+  font-size: 1em;
+  margin-bottom: 8px;
+  Font-family: 'IBM Plex Mono', monospace;
+}
+.input-box span{
+  color: red;
+}
+.input-box input[type=number]{
+  background-color: transparent;
+  font-family: 'IBM Plex Mono', Monospace;
+  border: none;
+  font-size: 1em;
+  position: relative;
+  outline: none;
+  padding: 8px 3px;
+  border-bottom: 2px solid black;
+  padding-left: 2rem;
+  transition: all 0.3s ease;
+}
+/* .input-box input:focus{
+  border-bottom: 2px solid var(--lightblue);
+} */
+.nom{
+  font-size: 1em;
+  font-family: 'IBM Plex Mono', Monospace;
+  position: absolute;
+  color: rgba(0,0,0,.8);
+  left: 3px;
+  user-select: none;
+  bottom: 10px;
+}
+.validation{
+  font-size: .9em;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+  color: rgba(0,0,0,.5);
+  font-family: 'IBM Plex Mono', Monospace;
+}
+.validation span{
+  color: red;
+}
+.nominal-button{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+.nominal-button button{
+  padding: 7px 0px;
+  cursor: pointer;
+  width: 24%;
+  font-size: 1em;
+  font-family: 'IBM Plex Mono', Monospace;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 4px 4px 1px rgb(0,0,0,1);
+  border: 1px solid black;
+}
+.gift-button{
+  font-family: 'IBM Plex Mono', Monospace;
+  padding: 0px 10px;
+}
+.gift-button p{
+  font-size: .9em;
+  margin: 10px 0px;
+}
+.gift-button button{
+  font-family: 'IBM Plex Mono', Monospace;
+  width: 100%;
+  padding: 3px 0px;
+  background-color: var(--lightblue);
+  border: 2px solid black;
+  text-transform: uppercase;
+  height: 40px;
+  font-size: 1em;
+  border-radius: 5px;
+  box-shadow: 4px 6px 1px rgb(0,0,0,1);
+  cursor: pointer;
+}
+.checkbox{
+  font-family: 'IBM Plex Mono', Monospace;
+  padding: 10px;
+  margin-top: 10px;
+}
+.checkbox input[type=checkbox]{
+  opacity: 0;
+}
+.checkbox input[type=checkbox] + label{
+  font-size: 13px;
+  text-transform: capitalize;
+  font-family: 'IBM Plex Mono', Monospace;
+  position: relative;
+  letter-spacing: .1em;
+  padding-left: 10px;
+  user-select: none;
+}
+.checkbox input[type=checkbox] + label::before{
+  content:'';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: -20px;
+  top: 0;
+  background-color: white;
+  border-radius: 2px;
+  outline: 2px solid rgba(0,0,0,.5);
+}
+.checkbox input[type=checkbox]:checked + label::before{
+  content:'';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: -20px;
+  top: 0;
+  background-color: var(--blue);
+  border-radius: 2px;
+  outline: 2px solid rgba(0,0,0,.5);
+}
+.checkbox input[type=checkbox]:checked + label::after{
+  content:'';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: -20px;
+  top: 0;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2048px-White_check.svg.png');
+  border-radius: 2px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 2px 1px 9px 5px rgb(17,142,234);
+  outline: 2px solid rgba(0,0,0,.5);
+}
+.checkbox2{
+display: flex;
+align-items: center;
+width: 100%;
+position: relative;
+}
+.checkbox3{
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.checkbox3 a{color: black;}
+
+
+.payment-container{
+  width: 100%;
+  height: auto; 
+  padding: 10px;
+  user-select: none;
+}
+.payment-container h3{
+  font-size: 19px;
+  font-family: "Comfortaa";
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.payment1{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background-color: blue; */
+}
+.qris{
+  width: 115px;
+  border-radius: 5px;
+  height: 60px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 6px 5px 1px rgb(0,0,0,1);
+  border: 1px solid black;
+}
+.qris img{
+  width: 100%;
+  height: 100%;
+}
+.payment1 img{
+  width: 70%;
+  object-fit: cover;
+  background-position: center;
+  background-size: center;
+  height: 100%;
+}
+.payment2{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.active3{
+  filter: grayscale(80%);
+}
+.payment2 .payment-choose{
+  width: 95px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 5px 1px rgb(0,0,0,1);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.payment-choose img{
+  width: 55%;
+  object-fit: cover;
+  background-position: center;
+}
+
+footer{
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 8px;
+}
+.footer1{
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.footer1 p{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.footer1 .list1 ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.list1 ul li{
+  display: flex;
+  justify-content: end;
+  list-style: underline;
+  color: black;
+}
+.list1 ul li a{color:black;}
+
+.footer2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer2 p{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.footer2 .sosial2 a{
+  font-size: 1.7em;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 7px;
+  transition: all 0.3s ease;
+}
+.sosial2 a:hover{
+  background-color: var(--bg);
+}

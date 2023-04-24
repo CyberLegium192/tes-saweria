@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- CDN LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="asset/css/style.css" type="text/css" media="all" />
+    <title>SAWERRIA</title>
+  </head>
+  <body>
+    <div class="btn-login">
+      <button type="button" id="login" onclick="login()">login</button>
+    </div>
+    <!-- LOGIN FORM -->
+    <div class="login-page">
+      <div class="login-form">
+        <i class='bx bxs-x-circle'></i>
+        <form>
+          <h4>Login</h4>
+          <div class="email">
+            <label for="email">email: *</label>
+            <input type="email" name="email" id="emailLogin" placeholder="email@pribadi.com"/>
+            <p class="valid" id="validmail">email tidak boleh kosong</p>
+          </div>
+          <div class="password email">
+            <label for="password">password: *</label>
+            <input type="password" name="email" id="password" value="" />
+            <p class="valid" id="validpass">password tidak boleh kosong</p>
+          </div>
+          <div class="submit-container">
+            <a href="">Lupa Password?</a>
+            <button type="button" onclick="masuk()">Masuk</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- PROFILE PAGE -->
+    <div class="profile">
+      <img src="asset/img/profile.jpg" alt="">
+      <div class="data-diri">
+        <h3>novalsyahh</h3>
+        <div class="sosial">
+          <a href="https://m.facebook.com/papan.tulis.31924"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="https://www.instagram.com/novalsyahhhh/"><i class='bx bxl-instagram' ></i></a>
+          <a href="https://www.tiktok.com/@valsyahh_?_t=8bNbjaBSyvw&_r=1"><i class='bx bxl-tiktok'></i></a>
+          <a href="#"><i class='bx bxl-youtube' ></i></a>
+        </div>
+        <p>terima kasih support nya adick adick</p>
+      </div>
+    </div>
+    <!-- NOMINAL GIFT -->
+    <div class="container">
+      <form action="" method="get" accept-charset="utf-8">
+        <div class="input-box">
+          <label for="nominal">Nominal: <span>*</span></label>
+          <input type="number" name="nominal" id="nominal" value="" />
+          <p class="nom">Rp</p>
+        </div>
+        <p class="validation">minimum alert: <span>rp 10.000</span> TTS: <span>rp 50.000</span></p>
+        <div class="nominal-button">
+          <button type="button" style="background:#8bd4dd;" onclick="sepuluh()">10k</button>
+          <button type="button" style="background:#118eea;" onclick="limapuluh()">50k</button>
+          <button type="button" style="background:#fbae2c;" onclick="seratus()">100k</button>
+          <button type="button" style="background:#a683dd;" onclick="tigaratus()">300k</button>
+        </div>
+        <div class="input-box secound">
+          <label for="text">Dari: <span>*</span></label>
+          <input type="text" name="text" id="text" value="" placeholder="freya"/>
+        </div>
+        <div class="input-box secound">
+          <label for="email">Email: <span>*</span></label>
+          <input type="email" name="email" id="emailgift" value="" placeholder="fraya@gmail.com"/>
+        </div>
+        <div class="input-box secound">
+          <label for="pesan">Pesan: <span>*</span></label>
+          <input type="text" name="pesan" id="pesan" value="" placeholder="Hallo sayang"/>
+        </div>
+      </form>
+      <div class="gift-button">
+        <p>Media: </p>
+        <button type="button">GIF</button>
+      </div>
+      <div class="checkbox">
+        <div class="checkbox2">
+          <input type="checkbox" name="check" id="check" />
+          <label for="check">saya berusia 17 tahun atau lebih</label>
+        </div>
+        <div class="checkbox3">
+          <input type="checkbox" name="check" id="check2" onclick="cek()"/>
+          <label for="check2">saya setuju bahwa dukungan ini diberikan secara sukarela dan bukan sebagai imbalan atas kegiatan kemersial, sesuai dengan <a href="">syarat dan ketentuan saweria.co</a></label>
+        </div>
+      </div>
+      <div class="payment-container">
+        <h3>metode pembayaran</h3>
+        <div class="payment1 active3">
+          <div class="qris">
+            <img src="/asset/img/qris.png" alt="">
+          </div>
+          <img src="/asset/img/list_bank.png" alt="">
+        </div>
+        <div class="payment2 active3">
+          <div class="payment-choose" style="background: #8bd4dd;">
+            <img src="/asset/img/gopay.png" alt="">
+          </div>
+          <div class="payment-choose" style="background:#4d3394;">
+            <img src="/asset/img/ovo.png" alt="">
+          </div>
+          <div class="payment-choose" style="background:#118eea;">
+            <img src="/asset/img/dana.png" alt="">
+          </div>
+          <div class="payment-choose" style="background:#e12428;">
+            <img src="/asset/img/linkaja.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer1">
+        <p>made with 💙 from SUB</p>
+        <div class="list1">
+          <ul>
+            <li><a href="">syarat & ketentuan</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">ChangeLog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer2">
+        <p>PT harta tahta freya</p>
+        <div class="sosial2">
+          <a href=""><i class='bx bx-envelope'></i></a>
+          <a href=""><i class='bx bxl-instagram' ></i></a>
+          <a href=""><i class='bx bxl-tiktok' ></i></a>
+          <a href=""><i class='bx bxl-discord-alt' ></i></a>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    <script src="asset/js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="asset/js/payment.js" type="text/javascript" charset="utf-8"></script>
+    <script src="asset/js/login.js" type="text/javascript" charset="utf-8"></script>
+    <!-- SCRIPT CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  </body>
+</html>
